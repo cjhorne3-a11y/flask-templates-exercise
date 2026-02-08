@@ -2,15 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>{{ page_title }}</title>
+    <title>{% block title %}{{ title }}{% endblock %}</title>
 </head>
 <body>
     <header>
         <h1>Chris’s Website</h1>
         <nav>
             <a href="{{ url_for('home') }}">Home</a>
-            <a href="#">About</a>
-            <a href="#">Contact</a>
+            <a href="{{ url_for('about') }}">About</a>
+            <a href="{{ url_for('contact') }}">Contact</a>
         </nav>
     </header>
 
