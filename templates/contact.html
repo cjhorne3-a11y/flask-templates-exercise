@@ -5,7 +5,7 @@
 {% block content %}
 <h2>Contact Chris</h2>
 
-<form>
+<form method="POST">
     <label>Name:</label><br>
     <input type="text" name="name" required><br><br>
 
@@ -14,4 +14,8 @@
 
     <button type="submit">Submit</button>
 </form>
+
+{% if submitted %}
+    <p><strong>Thanks {{ name }}!</strong> We received your email: {{ email }}</p>
+{% endif %}
 {% endblock %}
